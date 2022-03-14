@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+            {background-color: black;
+            color: greenyellow;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;}
+    </style>
+</head>
+<body>
+    <h1>Exemplo 04</h1>
+    <script>
+        var nome = prompt('Digite seu nome: ')
+
+        // //forma CONCATENADA
+        // alert('Olá ' + nome + ' seu nome tem ' + nome.length + ' caracteres')
+    
+    
+        // //forma INTERPOLADA
+        // alert(`Olá ${nome} seu nome tem ${nome.length} caracteres`)
+        // //atençao, forma interpolada necessita estar dentro de uma CRASE!!! ````
+
+
+        // //atribui a quantidade de caracteres do texto digitado pelo usuario á uma variavel
+        // var qtde = nome.length
+
+
+        // alert(`seu nome tem uma quantidade de ${qtde} letras`)
+
+        // //exibe a variavel NOME em maiúsculo
+        // alert('Nome em maiúsculo = ' + nome.toUpperCase())
+
+        // //exibe a variavel NOME em minusculo
+        // alert('Nome em minúsculo = ' + nome.toLowerCase())
+
+        //envia dados javascript num documento html 
+        document.write(`<h1>Olá ${nome}, seu nome tem ${nome.length} caracteres</h1>`)
+
+        var str = 'Olá Mundo Olá Mundo Olá Mundo'
+        var quantidade = str.length
+        
+        document.write(`<h1>Olá Mundo três vezes possúi ${quantidade} caracteres</h1>`)
+    </script>
+</body>
+</html>
