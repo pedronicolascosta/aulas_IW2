@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 05</title>
+</head>
+<body>
+    <h1>Onde você vive?</h1>
+    <input type="text" name="tx" id="tx">
+    <br>
+    <input type="button" value="VERIFICAR" onclick="verificar()"> 
+    <div id="resultado"></div>
+
+    <script>
+        function verificar(){
+            var txt = document.querySelector('input#tx')
+            var res = document.querySelector('div#resultado')
+            var txt = 
+            
+            if(txt = 'BRA'){
+                res.innerHTML += `<p>Sua nacionalidade é <strong>BRASILEIRA</strong></p>`
+            }
+            else{
+                res.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
