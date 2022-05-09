@@ -12,12 +12,43 @@
     var a = Number(prompt('INSIRA um valor para A'))
     var b = Number(prompt('INSIRA um valor para B'))
     var c = Number(prompt('INSIRA um valor para C'))
+    console.log('a --',a)
+    console.log('b --',b)
+    console.log('c --',c)
 
     var delta = Math.pow(b, 2) - 4 * a * c
-    var equacao1 = (-1 * b + Math.sqrt(delta))/2 * a
-    var equacao2 = (-1 * b - Math.sqrt(delta))/2 * a
+    console.log('delta --',delta)
 
-    alert(`Os valores informados foram: ${a}, ${b} e ${c} \nO valor de delta ficou como: ${delta} \nOs resultados da equação foram: X¹ = ${equacao1}; X² = ${equacao2}`)
+    if(delta<0){
+        console.log('não existem raízes')
+        alert('O DELTA É IGUAL A ZERO, NÃO HÁ COMO FAZER A CONTA')
+    }
+
+    else{
+        if(delta==0){
+            var resultado = raizes(b, delta, a)
+            console.log('x1',resultado[0])
+            console.log('x2',resultado[1])
+            alert(`Os valores informados foram: ${a}, ${b} e ${c} \nO valor de delta ficou como: ${delta} \nOs resultados da equação foram: X¹ = ${resultado[0]}; X² = ${resultado[1]}`)
+        }
+        else{
+            var resultado = raizes(b, delta, a)
+            console.log('x1',resultado[0])
+            console.log('x2',resultado[1])
+            alert(`Os valores informados foram: ${a}, ${b} e ${c} \nO valor de delta ficou como: ${delta} \nOs resultados da equação foram: X¹ = ${resultado[0]}; X² = ${resultado[1]}`)
+        }
+    }
+
+    function raizes(b, delta, a){
+        //calcular as raizes de 1 e 2
+        var equacao1 = (-1 * b + Math.sqrt(delta))/2 * a
+        var equacao2 = (-1 * b - Math.sqrt(delta))/2 * a
+        // console.log('x1 --',equacao1)
+        // console.log('x2 --',equacao2)
+        var vetor =[equacao1, equacao2]
+        return vetor
+    }
+    
 </script>
 
 </body>
